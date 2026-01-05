@@ -39,12 +39,14 @@ export const Map = () => {
 
   return (
     <div className={styles.mapContainer}>
-      <Button type="position" onClick={getPosition}>
-        {isLoadingPosition ? "Loading..." : "Use Your Position"}
-      </Button>
+      {!useGeolocationPosition && (
+        <Button type="position" onClick={getPosition}>
+          {isLoadingPosition ? "Loading..." : "Use Your Position"}
+        </Button>
+      )}
       <MapContainer
         center={mapPosition}
-        zoom={6}
+        zoom={17}
         scrollWheelZoom={true}
         className={styles.map}
       >
@@ -79,7 +81,7 @@ function DetectClick() {
   useMapEvents({
     click: (e) => {
       navigate(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`);
-      console.log(e);
+      // console.log(e);
     },
   });
 }
