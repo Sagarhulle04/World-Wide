@@ -46,7 +46,7 @@ export const Map = () => {
       )}
       <MapContainer
         center={mapPosition}
-        zoom={17}
+        zoom={6}
         scrollWheelZoom={true}
         className={styles.map}
       >
