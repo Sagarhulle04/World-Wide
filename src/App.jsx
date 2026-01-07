@@ -10,28 +10,31 @@ import CityList from "./components/CityList";
 import City from "./components/City";
 import Form from "./components/Form";
 import { CitiesProvider, useCities } from "./context/CitiesContext";
+import { AuthProvider } from "./context/AuthContext";
 
 function App() {
   return (
     <div>
-      <CitiesProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route index element={<HomePage />} />
-            <Route path="app" element={<AppLayout />}>
-              <Route index element={<Navigate to="cities" />} />
-              <Route path="cities" element={<CityList />} />
-              <Route path="cities/:id" element={<City />} />
-              <Route path="countries" element={<p>List of countries</p>} />
-              <Route path="form" element={<Form />} />
-            </Route>
-            <Route path="pricing" element={<Pricing />} />
-            <Route path="products" element={<Product />} />
-            <Route path="login" element={<Login />} />
-            <Route path="*" element={<PageNotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </CitiesProvider>
+      <AuthProvider>
+        <CitiesProvider>
+          <BrowserRouter>
+            <Routes>
+              <Route index element={<HomePage />} />
+              <Route path="app" element={<AppLayout />}>
+                <Route index element={<Navigate to="cities" />} />
+                <Route path="cities" element={<CityList />} />
+                <Route path="cities/:id" element={<City />} />
+                <Route path="countries" element={<p>List of countries</p>} />
+                <Route path="form" element={<Form />} />
+              </Route>
+              <Route path="pricing" element={<Pricing />} />
+              <Route path="products" element={<Product />} />
+              <Route path="login" element={<Login />} />
+              <Route path="*" element={<PageNotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </CitiesProvider>
+      </AuthProvider>
     </div>
   );
 }
