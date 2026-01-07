@@ -25,15 +25,27 @@
       "id": "17806751"
     },
     {
-      "id": "5551",
-      "cityName": "Liebenscheid",
-      "notes": "Nice Place",
-      "date": "2026-01-05T11:41:11.554Z",
-      "emoji": "🇩🇪",
-      "country": "Germany",
+      "id": "55de",
+      "cityName": "Sholapur",
+      "notes": "My home town...",
+      "date": "2026-01-07T16:31:49.689Z",
+      "emoji": "🇮🇳",
+      "country": "India",
       "position": {
-        "lat": "50.67592764170808",
-        "lng": "8.085937500000002"
+        "lat": "17.693628875545016",
+        "lng": "76.10229492187501"
+      }
+    },
+    {
+      "id": "f558",
+      "cityName": "Pune",
+      "notes": "",
+      "date": "2026-01-07T16:35:56.146Z",
+      "emoji": "🇮🇳",
+      "country": "India",
+      "position": {
+        "lat": "18.515331857626894",
+        "lng": "73.85559082031251"
       }
     }
   ]
